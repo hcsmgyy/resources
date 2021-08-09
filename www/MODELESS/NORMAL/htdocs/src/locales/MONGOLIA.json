@@ -1,0 +1,32 @@
+{
+  "English":"English",
+  "Chinese":"简体中文",
+  "ChineseTr":"繁體中文",
+  "Russian":"Pусский",
+  "Korean":"한국어",
+  "Portuguese":"Português",
+  "Spanish":"Español",
+  "Italian":"Italiano",
+  "Dutch":"Nederlands",
+  "French":"Française",
+  "Germany":"Deutsch",
+  "Czech":"Česky",
+  "Turkish":"Türk",
+  "Polish":"Polski",
+  "Hebrew":"עברי",
+  "Japanese":"日本語",
+  "Mongolia":"Монгол",
+  "AutoAnswer":"Автомат хариулагч",
+  "AutoAnswerDelay":"Автомат хариулагчийн хугацаа",
+  "AutoAnswerNumber":"Автомат хариулагчийн дугаар",
+  "AutoAnswerWhitelist":"Автомат хариулагчийн цагаан жагсаалт",
+  "DialogInfoCallPickup":"Дуудлага хүлээн авах",
+  "ForwardNoAnswer":"Урьдчилсан хариулт байхгүй байна",
+  "AnswerNewCall":"Шинэ дуудлагат хариулах",
+  "IndoorAutoAnswer":"Төв хаалганы автомат хариулагч",
+  "AnswerMode":"Хариултын горим",
+  "DisplayInCall":"Дуудлага харуулах",
+  "SavePageConfirm": "Do you want to discard the changes?If yes, the new page will be loaded, otherwise please submit manually!"
+  }
+  
+  
