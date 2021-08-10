@@ -117,7 +117,7 @@ function createDoorPhoneContent(vm) {
         type: "input",
         key: "deviceNumber",
         value: "",
-        placeholder: "SIP/IP",
+        placeholder: vm.$t("DeviceNumber"),
         description: vm.$t("DeviceNumberDesc"),
       },
       {
