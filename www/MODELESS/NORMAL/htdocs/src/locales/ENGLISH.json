@@ -2134,5 +2134,6 @@
   "ToolsLabel": "Tools",
   "VerifyNetworkLabel": "Verify the network address accessibility",
   "PingLabel": "Ping",
-  "PingError": "Please check your data in pink, it can only contain digits,letters and special characters(: .)."
+  "PingError": "Please check your data in pink, it can only contain digits,letters and special characters(: .).",
+  "MonitorExistWarning": "The same Device Name exists.Save data failed!"
 }

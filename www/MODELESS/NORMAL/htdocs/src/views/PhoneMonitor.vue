@@ -369,6 +369,7 @@ function getDoorPhoneTableData(vm, page) {
 }
 
 function onChangeDoorPhone(vm) {
+  console.log("aaa");
   let addModalData = getItemByKey(vm.data, "doorPhone", "doorPhone")
     .tableHeadData.addModalData;
   let deviceName =
@@ -388,6 +389,7 @@ function onChangeDoorPhone(vm) {
   let errFlag = false;
   if (deviceName.value == "") {
     deviceName.isWarn = true;
+    deviceName.warnLabel = vm.$t("MonitorDeviceNameNoEmpty");
     errFlag = true;
   }
 
@@ -442,6 +444,11 @@ function onChangeDoorPhone(vm) {
       //关闭窗口并展示成功
       addModalData.visible = false;
       showRequestSuccess(vm);
+    } else if (ret == -2) {
+      //hcsm
+      console.log("Bbb");
+      deviceName.isWarn = true;
+      deviceName.warnLabel = vm.$t("MonitorExistWarning");
     }
   });
 }

@@ -2122,5 +2122,6 @@
   "PBXGroupQuickDialDesc":"请设置组的速拨号码",
   "PBXGroupMemberDesc":"请选择组成员",
   "PBXBasicLabel":"PBX 基本",
-  "ClearLabel": "清空"
+  "ClearLabel": "清空",
+  "MonitorExistWarning": "保存数据失败！该设备名称已存在。"
 }
