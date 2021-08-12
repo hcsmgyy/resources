@@ -45,7 +45,9 @@ function setChangedData(vm, event) {
     event.itemKey == "contactListSelect"
   ) {
     getContactsTableData(vm, 1);
-  }
+  } else if (event.contentKey == "contactSetting") {
+    vm.changedCfgData[event.itemKey] = event.newVal;
+  } 
 }
 
 function submitData(vm) {
@@ -110,6 +112,7 @@ function createPageData(vm) {
     onSubmit: function () {
       getCommitData(vm);
       submitData(vm);
+      getContactsTableData(vm, 1);
     },
     onCancel: function () {
       vm.data.cancelLoading = true;
@@ -119,10 +122,48 @@ function createPageData(vm) {
     cancelLoading: false,
     contents: [],
   };
-
+  vm.data.contents.push(createContactSettingContent(vm));
   vm.data.contents.push(createContactListContent(vm));
   vm.data.contents.push(createDialNumberContent(vm));
   getContactsTableData(vm, 1);
+}
+
+function createContactSettingContent(vm) {
+  let sortModeItems = [
+    { key: 0, label: vm.$t("DefaultMode") },
+    { key: 1, label: vm.$t("ASCIIMode") },
+    { key: 2, label: vm.$t("CreateTimeMode") },
+  ];
+  let showLocalOnlyItems = [
+    { key: 0, label: vm.$t("Disalbed") },
+    { key: 1, label: vm.$t("Enabled") },
+  ];
+  let content = {
+    key: "contactSetting",
+    title: vm.$t("ContactsListSetting"),
+    titleDescription: vm.$t("ContactsListSettingDesc"),
+    items: [
+      {
+        title: vm.$t("ContactSortBy"),
+        type: "select",
+        key: "Config.Settings.CONTACT.SortMode",
+        value: vm.apiData.configData["Config.Settings.CONTACT.SortMode"],
+        defaultValue: 0,
+        selectItems: sortModeItems,
+        description: vm.$t("ContactGroupDesc"),
+      },
+      {
+        title: vm.$t("ShowLocalContactOnly"),
+        type: "select",
+        key: "Config.Settings.CONTACT.ShowLocalContactsOnly",
+        value: vm.apiData.configData["Config.Settings.CONTACT.ShowLocalContactsOnly"],
+        defaultValue: 0,
+        selectItems: showLocalOnlyItems,
+        description: vm.$t("ContactGroupDesc"),
+      },
+    ],
+  };
+  return content;
 }
 
 function createDialNumberContent(vm) {
@@ -276,7 +317,7 @@ function createContactListContent(vm) {
   //content
   let content = {
     key: "contactsList",
-    title: vm.$t("ContactsListSetting"),
+    title: vm.$t("LocalContactList"),
     titleDescription: vm.$t("ContactListSettingDesc"),
     items: [
       {

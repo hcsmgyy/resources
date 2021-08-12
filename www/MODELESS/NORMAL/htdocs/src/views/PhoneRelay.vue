@@ -609,6 +609,7 @@ function createRemoteRelayByHttpContent(vm) {
             scopedSlots: { customRender: "remoteAddress" },
             align: "center",
             width: "18%",
+            maxLength: 255,
           },
           {
             type: "input",

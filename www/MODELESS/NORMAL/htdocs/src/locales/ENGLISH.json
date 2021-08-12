@@ -2135,5 +2135,11 @@
   "VerifyNetworkLabel": "Verify the network address accessibility",
   "PingLabel": "Ping",
   "PingError": "Please check your data in pink, it can only contain digits,letters and special characters(: .).",
-  "MonitorExistWarning": "The same Device Name exists.Save data failed!"
+  "MonitorExistWarning": "The same Device Name exists.Save data failed!",
+  "LocalContactList": "Local Contacts List",
+  "ContactSortBy": "Contacts Sort By",
+  "ShowLocalContactOnly": "Show Local Contacts Only",
+  "DefaultMode": "Default",
+  "ASCIIMode": "ASCII Code",
+  "CreateTimeMode": "Created Time"
 }
