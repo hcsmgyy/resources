@@ -381,6 +381,17 @@ function createOthersContent(vm) {
         description: vm.$t("AnswerModeDesc"),
       },
       {
+        title: vm.$t("AnswerTone"),
+        type: "select",
+        key: "Config.Settings.AUDIO.AnswerTone",
+        value: vm.apiData.configData["Config.Settings.AUDIO.AnswerTone"],
+        selectItems: [
+          { key: 0, label: vm.$t("Disabled") },
+          { key: 1, label: vm.$t("Enabled") },
+        ],
+        description: vm.$t("AnswerModeDesc"),
+      },
+      {
         title: vm.$t("HangupBusyTone"),
         type: "checkbox",
         key: "Config.Settings.GENERAL.HungUpBusyTone",

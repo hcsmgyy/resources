@@ -2141,5 +2141,6 @@
   "ShowLocalContactOnly": "Show Local Contacts Only",
   "DefaultMode": "Default",
   "ASCIIMode": "ASCII Code",
-  "CreateTimeMode": "Created Time"
+  "CreateTimeMode": "Created Time",
+  "AnswerTone": "Answer Tone"
 }
