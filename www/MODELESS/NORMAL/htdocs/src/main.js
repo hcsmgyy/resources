@@ -5,6 +5,8 @@ import i18n from './i18n'
 import router from './router'
 import './plugins/ant-design-vue.js'
 
+import  'lib-flexible'
+
 Vue.config.productionTip = false
 
 window.vm = new Vue({

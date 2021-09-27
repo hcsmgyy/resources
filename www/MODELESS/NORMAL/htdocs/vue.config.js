@@ -65,13 +65,21 @@ module.exports = {
           },
           javascriptEnabled: true
         }
+      },
+      postcss: {
+        plugins: [
+          require('postcss-pxtorem')({
+            rootValue: 82.5, // 换算的基数
+            selectorBlackList: [], // 忽略转换正则匹配项
+            propList: ['*'],
+          }),
+        ]
       }
     }
   },
   configureWebpack: {
     plugins: [new AntDesignThemePlugin(options)]
-  }
-
+  },
 
 }
 
